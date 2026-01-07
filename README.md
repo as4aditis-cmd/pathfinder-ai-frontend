@@ -1,13 +1,13 @@
 🚀 Pathfinder AI – Frontend
 Pathfinder AI is an AI-powered career guidance platform that helps users discover the right career path, analyze skill gaps, track learning progress, and stay motivated throughout their journey.
-This repository contains the frontend of Pathfinder AI, built using React and deployed on Vercel.
+This repository contains the frontend of Pathfinder AI, built using React and deployed on Vercel.<br><br>
 
 
 🌐 Live Demo
 🔗 Frontend URL:
-https://pathfinder-ai-frontend-omega.vercel.app
+https://pathfinder-ai-frontend-omega.vercel.app<br><br>
 🔗 Backend API:
-https://skill-gap-analyser-ves3.onrender.com
+https://skill-gap-analyser-ves3.onrender.com<br><br>
 
 
 🧠 What Pathfinder AI Does
