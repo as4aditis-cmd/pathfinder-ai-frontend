@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+🚀 Pathfinder AI – Frontend
+Pathfinder AI is an AI-powered career guidance platform that helps users discover the right career path, analyze skill gaps, track learning progress, and stay motivated throughout their journey.
+This repository contains the frontend of Pathfinder AI, built using React and deployed on Vercel.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+🌐 Live Demo
+🔗 Frontend URL:
+https://pathfinder-ai-frontend-omega.vercel.app
+🔗 Backend API:
+https://skill-gap-analyser-ves3.onrender.com
 
-In the project directory, you can run:
 
-### `npm start`
+🧠 What Pathfinder AI Does
+🎯 Career discovery based on user skills & interests
+📊 AI-powered skill gap analysis
+🗺️ Personalized learning roadmaps
+📈 Progress tracking with visual progress bars
+🔥 Daily streak system to build consistency
+🏆 Achievements & motivation system
+💬 Community discussion & Q&A
+👤 Public user profile sharing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🛠️ Tech Stack (Frontend)
+⚛️ React (Create React App)
+🧭 React Router DOM
+🎨 CSS / Custom UI
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🌐 Fetch API (Backend integration)
+💾 LocalStorage (Progress persistence)
+🚀 Vercel (Deployment)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📁 Project Structure
+pathfinder-ai-frontend/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar.js
+│   │   ├── Dashboard.js
+│   │   ├── LearningPath.js
+│   │   ├── Profile.js
+│   │   ├── Chat.js
+│   │   └── ...
+│   │
+│   ├── pages/
+│   │   ├── CareerDiscovery.js
+│   │   ├── CareerResults.js
+│   │   └── Landing.js
+│   │
+│   ├── services/
+│   │   └── skillGapApi.js
+│   │
+│   ├── data/
+│   │   └── roadmaps.js
+│   │
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+│
+├── package.json
+├── .gitignore
+└── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔗 Backend Integration
+The frontend communicates with a Flask backend API for skill gap analysis.
+API Endpoint Used
+POST /api/skill-gap
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Example Request
+{
+  "career": "Data Analyst",
+  "skills": ["excel", "sql", "python"]
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Example Frontend Call
+const response = await fetch(
+  "https://skill-gap-analyser-ves3.onrender.com/api/skill-gap",
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ career, skills })
+  }
+);
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+📊 Progress Tracking Logic
+Each career has predefined skills
+Users check skills as they complete them
+Progress % = (completed skills / total skills) × 100
+Stored in localStorage
+Automatically reflected in the Dashboard
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🔥 Streak System (Frontend Logic)
+Tracks daily site visits
+Increases streak if user returns the next day
+Breaks streak if a day is missed
+Displays streak status in the Profile page
+Motivational messages shown on streak breaks 🎯
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+🧪 Run Locally
+1️⃣ Clone the repository
+git clone https://github.com/as4aditis-cmd/pathfinder-ai-frontend.git
+2️⃣ Install dependencies
+npm install
+3️⃣ Start the development server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+App will run at:
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+🚀 Deployment
+Frontend is deployed using Vercel.
+Auto-deploys on every push to main
+Environment variables managed via Vercel dashboard
+Optimized for fast global delivery
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+🧩 Future Enhancements
+🔐 Authentication (Firebase / OAuth)
+🧠 AI roadmap generation (LLM-based)
+📅 Calendar-based learning planner
+📱 Mobile responsive improvements
+🌍 Multi-language support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+👩‍💻 Author
+Aditi Sharma
+💡 Frontend Developer | AI & Web Enthusiast
+GitHub: https://github.com/as4aditis-cmd
+Project: Pathfinder AI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+⭐ Support
+If you like this project:
+⭐ Star the repository
+🍴 Fork it
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🧠 Share feedback
+
+🚀 “Your career is a journey — Pathfinder AI helps you choose the right path.”
