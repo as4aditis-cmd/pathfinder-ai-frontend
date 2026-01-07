@@ -3,148 +3,148 @@ Pathfinder AI is an AI-powered career guidance platform that helps users discove
 This repository contains the frontend of Pathfinder AI, built using React and deployed on Vercel.<br><br>
 
 
-🌐 Live Demo
+🌐 Live Demo<br><br>
 🔗 Frontend URL:
 https://pathfinder-ai-frontend-omega.vercel.app<br><br>
 🔗 Backend API:
 https://skill-gap-analyser-ves3.onrender.com<br><br>
 
 
-🧠 What Pathfinder AI Does
-🎯 Career discovery based on user skills & interests
-📊 AI-powered skill gap analysis
-🗺️ Personalized learning roadmaps
-📈 Progress tracking with visual progress bars
-🔥 Daily streak system to build consistency
-🏆 Achievements & motivation system
-💬 Community discussion & Q&A
-👤 Public user profile sharing
+🧠 What Pathfinder AI Does<br><br>
+🎯 Career discovery based on user skills & interests<br><br>
+📊 AI-powered skill gap analysis<br><br>
+🗺️ Personalized learning roadmaps<br><br>
+📈 Progress tracking with visual progress bars<br><br>
+🔥 Daily streak system to build consistency<br><br>
+🏆 Achievements & motivation system<br><br>
+💬 Community discussion & Q&A<br><br>
+👤 Public user profile sharing<br><br>
 
 
-🛠️ Tech Stack (Frontend)
-⚛️ React (Create React App)
-🧭 React Router DOM
-🎨 CSS / Custom UI
+🛠️ Tech Stack (Frontend)<br><br>
+⚛️ React (Create React App)<br><br>
+🧭 React Router DOM<br><br>
+🎨 CSS / Custom UI<br><br>
 
 
-🌐 Fetch API (Backend integration)
-💾 LocalStorage (Progress persistence)
-🚀 Vercel (Deployment)
+🌐 Fetch API (Backend integration)<br><br>
+💾 LocalStorage (Progress persistence)<br><br>
+🚀 Vercel (Deployment)<br><br>
 
 
-📁 Project Structure
-pathfinder-ai-frontend/
-│
-├── public/
-│   └── index.html
-│
-├── src/
-│   ├── components/
-│   │   ├── Navbar.js
-│   │   ├── Dashboard.js
-│   │   ├── LearningPath.js
-│   │   ├── Profile.js
-│   │   ├── Chat.js
-│   │   └── ...
-│   │
-│   ├── pages/
-│   │   ├── CareerDiscovery.js
-│   │   ├── CareerResults.js
-│   │   └── Landing.js
-│   │
-│   ├── services/
-│   │   └── skillGapApi.js
-│   │
-│   ├── data/
-│   │   └── roadmaps.js
-│   │
-│   ├── App.js
-│   ├── index.js
-│   └── App.css
-│
-├── package.json
-├── .gitignore
-└── README.md
+📁 Project Structure<br><br>
+pathfinder-ai-frontend/<br><br>
+│<br><br>
+├── public/<br><br>
+│   └── index.html<br><br>
+│<br><br>
+├── src/<br><br>
+│   ├── components/<br><br>
+│   │   ├── Navbar.js<br><br>
+│   │   ├── Dashboard.js<br><br>
+│   │   ├── LearningPath.js<br><br>
+│   │   ├── Profile.js<br><br>
+│   │   ├── Chat.js<br><br>
+│   │   └── ...<br><br>
+│   │<br><br>
+│   ├── pages/<br><br>
+│   │   ├── CareerDiscovery.js<br><br>
+│   │   ├── CareerResults.js<br><br>
+│   │   └── Landing.js<br><br>
+│   │<br><br>
+│   ├── services/<br><br>
+│   │   └── skillGapApi.js<br><br>
+│   │<br><br>
+│   ├── data/<br><br>
+│   │   └── roadmaps.js<br><br>
+│   │<br><br>
+│   ├── App.js<br><br>
+│   ├── index.js<br><br>
+│   └── App.css<br><br>
+│<br><br>
+├── package.json<br><br>
+├── .gitignore<br><br>
+└── README.md<br><br>
 
 
-🔗 Backend Integration
-The frontend communicates with a Flask backend API for skill gap analysis.
-API Endpoint Used
-POST /api/skill-gap
+🔗 Backend Integration<br><br>
+The frontend communicates with a Flask backend API for skill gap analysis.<br><br>
+API Endpoint Used<br><br>
+POST /api/skill-gap<br><br>
 
 
-Example Request
-{
-  "career": "Data Analyst",
-  "skills": ["excel", "sql", "python"]
-}
+Example Request<br><br>
+{<br><br>
+  "career": "Data Analyst",<br><br>
+  "skills": ["excel", "sql", "python"]<br><br>
+}<br><br>
 
-Example Frontend Call
-const response = await fetch(
-  "https://skill-gap-analyser-ves3.onrender.com/api/skill-gap",
-  {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ career, skills })
-  }
-);
-
-
-📊 Progress Tracking Logic
-Each career has predefined skills
-Users check skills as they complete them
-Progress % = (completed skills / total skills) × 100
-Stored in localStorage
-Automatically reflected in the Dashboard
+Example Frontend Call<br><br>
+const response = await fetch(<br><br>
+  "https://skill-gap-analyser-ves3.onrender.com/api/skill-gap",<br><br>
+  {<br><br>
+    method: "POST",<br><br>
+    headers: { "Content-Type": "application/json" },<br><br>
+    body: JSON.stringify({ career, skills })<br><br>
+  }<br><br>
+);<br><br>
 
 
-🔥 Streak System (Frontend Logic)
-Tracks daily site visits
-Increases streak if user returns the next day
-Breaks streak if a day is missed
-Displays streak status in the Profile page
-Motivational messages shown on streak breaks 🎯
+📊 Progress Tracking Logic<br><br>
+Each career has predefined skills<br><br>
+Users check skills as they complete them<br><br>
+Progress % = (completed skills / total skills) × 100<br><br>
+Stored in localStorage<br><br>
+Automatically reflected in the Dashboard<br><br>
 
 
-🧪 Run Locally
-1️⃣ Clone the repository
-git clone https://github.com/as4aditis-cmd/pathfinder-ai-frontend.git
-2️⃣ Install dependencies
-npm install
-3️⃣ Start the development server
-npm start
+🔥 Streak System (Frontend Logic)<br><br>
+Tracks daily site visits<br><br>
+Increases streak if user returns the next day<br><br>
+Breaks streak if a day is missed<br><br>
+Displays streak status in the Profile page<br><br>
+Motivational messages shown on streak breaks 🎯<br><br>
 
 
-App will run at:
-http://localhost:3000
+🧪 Run Locally<br><br>
+1️⃣ Clone the repository<br><br>
+git clone https://github.com/as4aditis-cmd/pathfinder-ai-frontend.git<br><br>
+2️⃣ Install dependencies<br><br>
+npm install<br><br>
+3️⃣ Start the development server<br><br>
+npm start<br><br>
 
 
-🚀 Deployment
-Frontend is deployed using Vercel.
-Auto-deploys on every push to main
-Environment variables managed via Vercel dashboard
-Optimized for fast global delivery
+App will run at:<br><br>
+http://localhost:3000<br><br>
 
 
-🧩 Future Enhancements
-🔐 Authentication (Firebase / OAuth)
-🧠 AI roadmap generation (LLM-based)
-📅 Calendar-based learning planner
-📱 Mobile responsive improvements
-🌍 Multi-language support
+🚀 Deployment<br><br>
+Frontend is deployed using Vercel.<br><br>
+Auto-deploys on every push to main<br><br>
+Environment variables managed via Vercel dashboard<br><br>
+Optimized for fast global delivery<br><br>
 
 
-👩‍💻 Author
-Aditi Sharma
-💡 Frontend Developer | AI & Web Enthusiast
-GitHub: https://github.com/as4aditis-cmd
-Project: Pathfinder AI
+🧩 Future Enhancements<br><br>
+🔐 Authentication (Firebase / OAuth)<br><br>
+🧠 AI roadmap generation (LLM-based)<br><br>
+📅 Calendar-based learning planner<br><br>
+📱 Mobile responsive improvements<br><br>
+🌍 Multi-language support<br><br>
 
 
-⭐ Support
-If you like this project:
-⭐ Star the repository
-🍴 Fork it
+👩‍💻 Author<br><br>
+Aditi Sharma<br><br>
+💡 Frontend Developer | AI & Web Enthusiast<br><br>
+GitHub: https://github.com/as4aditis-cmd<br><br>
+Project: Pathfinder AI<br><br>
+
+
+⭐ Support<br><br>
+If you like this project:<br><br>
+⭐ Star the repository<br><br>
+🍴 Fork it<br><br>
 
 🧠 Share feedback
 
