@@ -1,0 +1,776 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #010e1c;
+}
+
+.page {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  background: #1adbf0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card {
+  background: rgb(113, 218, 245);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 80px;
+  background: linear-gradient(180deg, #020b16, #000);
+  position: relative;
+}
+
+/* LEFT SIDE */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap; /* 🔥 keeps Pathfinder AI in one line */
+}
+
+.nav-logo {
+  width: 36px;
+  height: 36px;
+}
+
+.nav-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+/* RIGHT SIDE LINKS */
+.nav-links {
+  display: flex;
+  gap: 55px; /* 🔥 space between Home, Discover, etc */
+  margin-left: auto; /* 🔥 pushes links further right */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+}
+
+/* GLOW LINE */
+.glowing-hr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00eaff, transparent);
+  box-shadow: 0 0 10px #00eaff;
+}
+
+
+.glowing-hr {
+  /* Initial styling for the hr element */
+  margin-top: 50px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00ffff,
+    transparent
+  );
+  box-shadow: 0 0 12px #00ffff;
+  width: 100%;
+
+  /* ... (previous styling) ... */
+  animation: pulse-glow 2s infinite alternate; /* Applies the animation */
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  to {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+  }
+}
+
+.career-page {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  color: #ffffff;
+  background-color: #050912;
+  font-family: "Inter", sans-serif;
+}
+
+.section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #1a1f2e;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #00ffff;
+}
+
+.section-subtitle {
+  color: #cfd3ff;
+  margin-bottom: 20px;
+}
+
+/* Bullet Points */
+.bullet-list {
+  padding-left: 20px;
+}
+
+.bullet-list li {
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.cta-button,
+.submit-button {
+  padding: 12px 24px;
+  background: #00ffff;
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cta-button:hover,
+.submit-button:hover {
+  background: #00cccc;
+}
+
+/* Input */
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.interest-box {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  background: #0a0f1f;
+  border: 1px solid #1a1f2e;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+/* Guided Questions */
+.guided-questions {
+  margin-top: 24px;
+}
+
+.guided-questions h3 {
+  margin-bottom: 12px;
+}
+
+.guided-questions label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.helper-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #aab0ff;
+}
+
+/* Disclaimer */
+.disclaimer {
+  margin-top: 24px;
+  font-size: 13px;
+  color: #bbbbbb;
+  opacity: 0.8;
+}
+
+.results-page {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Inter", sans-serif;
+  background-color: #050912;
+  color: #ffffff;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 26px;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.goal-text {
+  color: #cfd3ff;
+}
+
+/* Career Cards */
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.career-card {
+  background: #0a0f1f;
+  border: 1px solid #1a1f2e;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.career-card h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 12px;
+}
+
+.match {
+  font-size: 14px;
+  color: #aab0ff;
+  margin-bottom: 12px;
+}
+
+/* Skills */
+.skills ul {
+  padding-left: 20px;
+  margin-top: 6px;
+}
+
+.skills li {
+  font-size: 14px;
+}
+
+/* Buttons */
+.explore-button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.explore-button:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+.final-button {
+  padding: 14px 28px;
+  background: #00ffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.final-button:hover {
+  background: #00cccc;
+}
+
+/* Compare */
+.compare-options label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.dashboard {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+  background: #050912;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #1a1f2e;
+}
+
+.section-title {
+  font-size: 26px;
+  color: #00ffff;
+}
+
+.goal-text {
+  color: #cfd3ff;
+  margin-top: 8px;
+}
+
+/* Overview */
+.overview p {
+  margin: 6px 0;
+}
+
+.progress-container {
+  margin-top: 12px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #1a1f2e;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #00ffff;
+  border-radius: 6px;
+}
+
+/* Tasks */
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.task-card {
+  background: #0a0f1f;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #1a1f2e;
+}
+
+.start-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #00ffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color:#010e1c;
+}
+
+.secondary-btn{
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #00ffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #010e1c;
+}
+
+/* Checklist */
+.checklist li {
+  margin-bottom: 6px;
+}
+
+/* Badges */
+.badges {
+  margin-top: 12px;
+}
+
+.badge {
+  background: #1a1f2e;
+  padding: 6px 12px;
+  border-radius: 12px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* Tabs */
+.tabs button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Challenge */
+.challenge-list li {
+  margin-bottom: 8px;
+}
+
+.community-page {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+  background: #050912;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #1a1f2e;
+}
+
+.section-title {
+  font-size: 26px;
+  color: #00ffff;
+}
+
+.goal-text {
+  color: #cfd3ff;
+  margin-top: 6px;
+}
+
+/* Chat Rooms */
+.chat-rooms {
+  list-style: none;
+  padding: 0;
+}
+
+.chat-room {
+  padding: 10px 14px;
+  background: #0a0f1f;
+  border: 1px solid #1a1f2e;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.chat-room:hover {
+  border-color: #00ffff;
+}
+
+/* Question Section */
+.question-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  background: #0a0f1f;
+  border: 1px solid #1a1f2e;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.post-btn {
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #00ffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Interaction */
+.interaction-options {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aab0ff;
+}
+
+.interaction-options span {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+/* AI Chat */
+.ai-chat {
+  margin-top: 10px;
+}
+
+.ai-message {
+  background: #0a0f1f;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.ai-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #1a1f2e;
+  background: #0a0f1f;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.send-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-page {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  background: #050912;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 26px;
+  color: #00ffff;
+}
+
+.subtitle {
+  color: #cfd3ff;
+  margin-top: 6px;
+}
+
+/* Cards */
+.card {
+  background: #0a0f1f;
+  border: 1px solid #1a1f2e;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Career Highlight */
+.highlight {
+  font-size: 20px;
+  color: #00ffff;
+  margin-top: 8px;
+}
+
+/* Streak */
+.streak {
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Achievements */
+.achievements {
+  margin-top: 10px;
+}
+
+.badge {
+  display: inline-block;
+  background: #1a1f2e;
+  padding: 8px 14px;
+  border-radius: 16px;
+  margin: 6px 6px 0 0;
+  font-size: 14px;
+}
+
+.active-room {
+  background-color: #e6f0ff;
+  font-weight: bold;
+  border-left: 4px solid #2563eb;
+}
+
+.discovery-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discovery-card {
+  background: rgba(15, 30, 45, 0.85);
+  padding: 40px;
+  width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+  color: white;
+}
+
+.discovery-card h1 {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #a0e9ff;
+  margin-bottom: 24px;
+}
+
+.discovery-card label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.discovery-card select,
+.discovery-card textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #0c1b2a;
+  color: white;
+}
+
+.discovery-card textarea {
+  height: 80px;
+  resize: none;
+}
+
+.discovery-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.discovery-card button:hover {
+  box-shadow: 0 0 15px #00f2fe;
+}
+
+.discovery-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.results-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-card {
+  background: rgba(15, 30, 45, 0.9);
+  padding: 40px;
+  width: 460px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+  color: white;
+}
+
+.results-card h1 {
+  margin-bottom: 20px;
+}
+
+.summary p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.level {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.level.beginner {
+  background: #ff9800;
+}
+
+.level.intermediate {
+  background: #00c6ff;
+}
+
+.skills-box {
+  margin-top: 24px;
+}
+
+.skills-box h3 {
+  margin-bottom: 10px;
+}
+
+.skills-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-box li {
+  background: #0c1b2a;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.success {
+  color: #00f2fe;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actions button:first-child {
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  color: black;
+}
+
+.actions button.secondary {
+  background: transparent;
+  color: #00f2fe;
+  border: 1px solid #00f2fe;
+}
+
+
+
+
+
+
+
